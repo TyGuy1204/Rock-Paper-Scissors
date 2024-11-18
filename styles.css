@@ -1,5 +1,43 @@
-.body{
+body{
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #003135;
+    gap:20px;
+}
+.play-buttons{
+    border-radius: 8px;
+    border : 1px solid #0FA4AF;
+    padding: 10px 20px;
+    background-color: #024950;
+}
+#picks-container{
+    font-family: "Monaco",sans-serif ;
+    font-size: 20px;
+    color: #003135;
+    border-radius: 8px;
+    border : 1px solid #0FA4AF;
+    padding: 10px 20px;
+    background-color: #024950;
+}
+#results-container{
+    font-family: "Monaco",sans-serif ;
+    font-size: 20px;
+    color: #003135;
+    border-radius: 8px;
+    border : 1px solid #0FA4AF;
+    padding: 10px 20px;
+    background-color: #024950;
+}
+button{
+    font-family: "Monaco",sans-serif ;
+    font-size: 20px;
+    color: #003135;
+    background-color: #0FA4AF;
+    border: 2px solid #003135;
+    width: 120px;
+    height: 50px;
+    border-radius: 8px;
 }
