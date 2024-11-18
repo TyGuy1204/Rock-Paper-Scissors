@@ -3,6 +3,8 @@ let computerScore  = 0;
 
 const player_pick = document.querySelector("#player-pick");
 const computer_pick = document.querySelector("#computer-pick");
+const player_score  = document.querySelector("#player-score");
+const computer_score = document.querySelector("#computer-score");
 
 console.log(player_pick);
 
@@ -61,8 +63,8 @@ function playRound(humanChoice, computerChoice){
         console.log("You lose! Scissors beats Paper.");
         computerScore++;
     }
-    console.log("Human Score: " + humanScore);
-    console.log("Computer Score: " + computerScore);
+    player_score.textContent = "Human Score: " + humanScore;
+    computer_score.textContent = "Computer Score: " + computerScore;
 }
 
 const buttons  = document.querySelectorAll("button");
