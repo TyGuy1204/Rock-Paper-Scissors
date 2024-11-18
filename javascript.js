@@ -60,12 +60,10 @@ function playRound(humanChoice, computerChoice){
     console.log("Computer Score: " + computerScore);
 }
 
-
-function playGame(){
-        humanSelection = getHumanChoice();
-        computerSelection = getComputerChoice();
-        playRound(humanSelection,computerSelection);
-        console.log("Final Score:\nHuman Score: " + humanScore + "\nComputer Score: "+computerScore);
-}
-
-playGame();
+const buttons  = document.querySelectorAll("button");
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        console.log(button.id);
+        playRound(button.id,getComputerChoice());
+    });
+});
