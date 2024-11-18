@@ -13,24 +13,6 @@ body{
     padding: 10px 20px;
     background-color: #024950;
 }
-#picks-container{
-    font-family: "Monaco",sans-serif ;
-    font-size: 20px;
-    color: #003135;
-    border-radius: 8px;
-    border : 1px solid #0FA4AF;
-    padding: 10px 20px;
-    background-color: #024950;
-}
-#results-container{
-    font-family: "Monaco",sans-serif ;
-    font-size: 20px;
-    color: #003135;
-    border-radius: 8px;
-    border : 1px solid #0FA4AF;
-    padding: 10px 20px;
-    background-color: #024950;
-}
 button{
     font-family: "Monaco",sans-serif ;
     font-size: 20px;

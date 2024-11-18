@@ -6,6 +6,8 @@ const computer_pick = document.querySelector("#computer-pick");
 const player_score  = document.querySelector("#player-score");
 const computer_score = document.querySelector("#computer-score");
 const round_result  = document.querySelector("#round-result");
+const pick_container  = document.querySelector("#picks-container");
+const results_container  = document.querySelector("#results-container");
 
 
 function getComputerChoice(){
@@ -71,5 +73,7 @@ const buttons  = document.querySelectorAll("button");
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
         playRound(button.id,getComputerChoice());
+        pick_container.style.cssText  = "font-family: 'Monaco',sans-serif; font-size: 20px; color: #003135;border-radius: 8px;border : 1px solid #0FA4AF;padding: 10px 20px; background-color: #024950;";
+        results_container.style.cssText  = "font-family: 'Monaco',sans-serif; font-size: 20px; color: #003135;border-radius: 8px;border : 1px solid #0FA4AF;padding: 10px 20px; background-color: #024950;";
     });
 });
