@@ -8,6 +8,7 @@ const computer_score = document.querySelector("#computer-score");
 const round_result  = document.querySelector("#round-result");
 const pick_container  = document.querySelector("#picks-container");
 const results_container  = document.querySelector("#results-container");
+const winner  = document.querySelector(".winner");
 
 
 function getComputerChoice(){
@@ -65,6 +66,24 @@ function playRound(humanChoice, computerChoice){
         round_result.textContent = "Round Result: You lose! Scissors beats Paper.";
         computerScore++;
     }
+
+    if(humanScore == 5){
+        humanScore = 0;
+        computerScore = 0;
+        winner.textContent = "Winner: Human!";
+        winner.style.cssText  = "font-family: 'Monaco',sans-serif; font-size: 20px; color: #003135;border-radius: 8px;border : 1px solid #0FA4AF;padding: 10px 20px; background-color: #024950;";
+    }
+    else if(computerScore == 5){
+        humanScore = 0;
+        computerScore = 0;
+        winner.textContent = "Winner: Computer!";
+        winner.style.cssText  = "font-family: 'Monaco',sans-serif; font-size: 20px; color: #003135;border-radius: 8px;border : 1px solid #0FA4AF;padding: 10px 20px; background-color: #024950;";
+    }
+    else{
+        winner.style.cssText = "";
+        winner.textContent = "";
+    }
+
     player_score.textContent = "Human Score: " + humanScore;
     computer_score.textContent = "Computer Score: " + computerScore;
 }
@@ -77,3 +96,4 @@ buttons.forEach((button) => {
         results_container.style.cssText  = "font-family: 'Monaco',sans-serif; font-size: 20px; color: #003135;border-radius: 8px;border : 1px solid #0FA4AF;padding: 10px 20px; background-color: #024950;";
     });
 });
+
