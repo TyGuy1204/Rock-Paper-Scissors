@@ -5,6 +5,7 @@ const player_pick = document.querySelector("#player-pick");
 const computer_pick = document.querySelector("#computer-pick");
 const player_score  = document.querySelector("#player-score");
 const computer_score = document.querySelector("#computer-score");
+const round_result  = document.querySelector("#round-result");
 
 console.log(player_pick);
 
@@ -37,30 +38,30 @@ function playRound(humanChoice, computerChoice){
     player_pick.textContent = "Your choice: " + humanChoice;
     computer_pick.textContent = "Computer choice: " + computerChoice;
     if(humanChoice === computerChoice){
-        console.log("Its a tie! Try again.");
+        round_result.textContent = "Round Result: Its a tie! Try again.";
     }
     else if(humanChoice === "rock" && computerChoice === "scissors"){
-        console.log("You win! Rock beats Scissors.");
+        round_result.textContent = "You win! Rock beats Scissors.";
         humanScore++;
     }
     else if(humanChoice === "scissors" && computerChoice === "rock"){
-        console.log("You lose! Rock beats Scissors.");
+        round_result.textContent = "Round Result: You lose! Rock beats Scissors.";
         computerScore++;
     }
     else if(humanChoice === "rock" && computerChoice === "paper"){
-        console.log("You lose! Paper beats Rock.");
+        round_result.textContent = "Round Result: You lose! Paper beats Rock.";
         computerScore++;
     }
     else if(humanChoice === "paper" && computerChoice === "rock"){
-        console.log("You win! Paper beats Rock.");
+        round_result.textContent = "Round Result: You win! Paper beats Rock.";
         humanScore++;
     }
     else if(humanChoice === "scissors" && computerChoice === "paper"){
-        console.log("You win! Scissors beats Paper.");
+        round_result.textContent = "Round Result: You win! Scissors beats Paper.";
         humanScore++;
     }
     else if(humanChoice === "paper" && computerChoice === "scissors"){
-        console.log("You lose! Scissors beats Paper.");
+        round_result.textContent = "Round Result: You lose! Scissors beats Paper.";
         computerScore++;
     }
     player_score.textContent = "Human Score: " + humanScore;
