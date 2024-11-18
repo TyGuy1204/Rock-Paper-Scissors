@@ -1,6 +1,11 @@
 let humanScore  = 0;
 let computerScore  = 0;
 
+const player_pick = document.querySelector("#player-pick");
+const computer_pick = document.querySelector("#computer-pick");
+
+console.log(player_pick);
+
 function getComputerChoice(){
     let choice  = Math.floor(Math.random() * 3)+1;
     if(choice == 1){
@@ -27,8 +32,8 @@ function getHumanChoice(){
 }
 
 function playRound(humanChoice, computerChoice){
-    console.log("Your choice: "+humanChoice);
-    console.log("Computer choice: "+computerChoice);
+    player_pick.textContent = "Your choice: " + humanChoice;
+    computer_pick.textContent = "Computer choice: " + computerChoice;
     if(humanChoice === computerChoice){
         console.log("Its a tie! Try again.");
     }
