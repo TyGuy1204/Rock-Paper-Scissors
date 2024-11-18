@@ -7,7 +7,6 @@ const player_score  = document.querySelector("#player-score");
 const computer_score = document.querySelector("#computer-score");
 const round_result  = document.querySelector("#round-result");
 
-console.log(player_pick);
 
 function getComputerChoice(){
     let choice  = Math.floor(Math.random() * 3)+1;
@@ -71,7 +70,6 @@ function playRound(humanChoice, computerChoice){
 const buttons  = document.querySelectorAll("button");
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
-        console.log(button.id);
         playRound(button.id,getComputerChoice());
     });
 });
